@@ -32,7 +32,7 @@ function HowItWorks() {
           <div className="hicon">
             <i className="ri-calculator-fill"></i>
           </div>
-          <div className="wstep-content">
+          <div className="step-content">
             <h3>Step 2: AI-Powered Credit Assessment</h3>
             <p>Our AI algorithms analyze the data you provided and assess your financial health. This step uses machine learning models to calculate your creditworthiness and predict how likely you are to be approved for a loan or credit.</p>
           </div>

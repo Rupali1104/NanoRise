@@ -14,11 +14,11 @@ export const HeroSection = () => {
   useEffect(() => {
     setTimeout(() => {
       setIsImageVisible(true);
-    }, 3000); 
+    }, 1000); 
 
     const interval = setInterval(() => {
       setCurrentImageIndex((prevIndex) => (prevIndex + 1) % heroImages.length);
-    }, 5000); 
+    }, 2000); 
 
     return () => clearInterval(interval);
   }, []);

@@ -33,7 +33,7 @@ export const Services = () => {
         <div className="features-column">
           <div className="feature-item">
             <div className="sicon">
-              <i className="ri-bar-chart-box-fill"></i>
+            <i className="ri-bar-chart-box-fill" style={{ color: 'blue' }}></i>
             </div>
             <h4>AI-Powered Credit Assessment</h4>
           </div>

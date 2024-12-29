@@ -7,7 +7,7 @@
 
 :root {
   --icon-bg: #eeeff1;
-  --brand-color: #fe5d3d;
+  --brand-color: #265ffc;
 }
 
 /* Services Section Start */
@@ -34,7 +34,7 @@
 }
 
 .header-text h3 span {
-  background: linear-gradient(to right, #ff8971, #fa2a00);
+  background: linear-gradient(to right, #6cb2eb, #4682b4, #1e3a8a, #162447, #0b2545);
   -webkit-background-clip: text;
   background-clip: text;
   color: transparent;
@@ -101,14 +101,14 @@
 
 .sicon i {
   font-size: 1.6rem;
-  color: var(--brand-color);
+  color: #265ffc;
 }
 .service-more {
   text-align: center;
 }
 
 .service-more button {
-  background: linear-gradient(45deg, #ff7e5f, #fc9546);
+  background: linear-gradient(45deg, #5f7fff, #2f1da8);
   color: white;
   padding: 12px 20px;
   margin: 40px auto;
@@ -123,7 +123,7 @@
 .service-more button:hover {
   transform: translateY(-3px);
   box-shadow: 0 6px 10px rgba(0, 0, 0, 0.15);
-  background: linear-gradient(45deg, #fa7f20, #ff6b46);
+  background: linear-gradient(45deg, #445ef4, #1b007b);
 }
 
 .service-more button:active {

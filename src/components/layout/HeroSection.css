@@ -8,7 +8,7 @@
 :root {
   --hero-bg: #eeeff1;
   --nav-btn: #474fa0;
-  --brand-color: #fe5d3d;
+  --brand-color: #180377;
 }
 
 /* Main Section */
@@ -34,7 +34,7 @@ main {
 }
 
 .text-section h1 span {
-  background: linear-gradient(to right, #ff8971, #fa2a00);
+  background: linear-gradient(to right, #6cb2eb, #4682b4, #1e3a8a, #162447, #0b2545);
   -webkit-background-clip: text;
   background-clip: text;
   color: transparent;
@@ -63,12 +63,12 @@ main {
 }
 
 .btn:hover {
-  background-color: #fa2a00;
+  background-color: #0b0498;
   transform: scale(1.05);
 }
 
 .btn-gradient {
-  background: linear-gradient(45deg, #ff6f00, #ff9900);
+  background: linear-gradient(45deg, #0044ff, #465bf8);
   color: white;
 }
 
@@ -88,7 +88,7 @@ main {
 .orange-box {
   width: 50vw;
   height: 80vh;
-  background: linear-gradient(to right, #5c37d3, #6d50ff, #1b21c5, #266af1, #b8cde8);
+  background: linear-gradient(to right, #1a237e, #283593, #3949ab, #5c6bc0, #7986cb);
   background-size: 300% 300%;
   border-radius: 4px;
   border-top-left-radius: 40px;

@@ -21,7 +21,7 @@
     line-height: 1.6;
   }
   .how-it-works-header span {
-    background: linear-gradient(to right, #ff8971, #fa2a00);
+    background: linear-gradient(to right, #527bf5, #01158a);
     -webkit-background-clip: text;
     background-clip: text;
     color: transparent;
@@ -51,7 +51,7 @@
   
   .step-content h3 {
     font-size: 1.8rem;
-    color: #333;
+    color: #4821e5;
     margin-bottom: 10px;
   }
   
@@ -84,7 +84,7 @@
   }
   
   .cta-section button {
-    background: linear-gradient(45deg, #ff7e5f, #fc9546);
+    background: linear-gradient(45deg, #527bf5, #01158a);
     color: white;
     padding: 12px 20px;
     margin: 20px auto;
@@ -99,7 +99,7 @@
   .cta-section button:hover {
     transform: translateY(-3px);
     box-shadow: 0 6px 10px rgba(0, 0, 0, 0.15);
-    background: linear-gradient(45deg, #fa7f20, #ff6b46);
+    background: linear-gradient(45deg, #527bf5, #01158a);
   }
   
   .cta-section button:active {
