@@ -1,31 +1,19 @@
 import { useState } from "react";
-import { UserButton, useUser } from "@clerk/clerk-react";
-import "./Dashboard.css";
 import { useNavigate } from "react-router-dom";
+import "./Dashboard.css";
 import { Footer } from "../components/layout/Footer";
 
 export const Dashboard = () => {
   const [currentStep, setCurrentStep] = useState(1);
   const navigate = useNavigate();
-  const { isLoaded, isSignedIn, user } = useUser();
-
-  // Handle loading state
-  if (!isLoaded) {
-    return <div>Loading...</div>;
-  }
-
-  // Handle authentication
-  if (!isSignedIn) {
-    navigate('/login');
-    return null;
-  }
 
   const steps = [
     { id: 1, title: "Personal Information" },
     { id: 2, title: "Business Details" },
     { id: 3, title: "Document Upload" },
-    { id: 4, title: "Loan Application" },
-    { id: 5, title: "Review & Submit" },
+    { id: 4, title: "Social References" },
+    { id: 5, title: "Loan Application" },
+    { id: 6, title: "Review & Submit" },
   ];
 
   const handleFileUpload = (event) => {
@@ -46,24 +34,24 @@ export const Dashboard = () => {
           <div>
             <h3>Personal Information</h3>
             <div className="form-group">
-              <input 
-                type="text" 
-                placeholder="First Name" 
+              <input
+                type="text"
+                placeholder="First Name"
                 className="input"
-                defaultValue={user?.firstName || ''}
+                defaultValue=""
               />
-              <input 
-                type="text" 
-                placeholder="Last Name" 
+              <input
+                type="text"
+                placeholder="Last Name"
                 className="input"
-                defaultValue={user?.lastName || ''}
+                defaultValue=""
               />
             </div>
             <input
               type="email"
               placeholder="Email"
               className="input full-width"
-              defaultValue={user?.primaryEmailAddress?.emailAddress || ''}
+              defaultValue=""
             />
             <input
               type="tel"
@@ -107,6 +95,13 @@ export const Dashboard = () => {
         return (
           <div>
             <h3>Document Upload</h3>
+            <h2>Required Documents:</h2>
+            <ul className="doc-list">
+              <li>Business Registration (If available)</li>
+              <li>Recent Bank Statements (If available)</li>
+              <li>Any Govt. ID Proof</li>
+              <li>Proof of Business Location</li>
+            </ul>
             <div className="upload-area">
               <input
                 type="file"
@@ -115,17 +110,80 @@ export const Dashboard = () => {
                 onChange={handleFileUpload}
                 className="upload-input"
               />
+              <input
+                type="file"
+                id="file-upload"
+                multiple
+                onChange={handleFileUpload}
+                className="upload-input"
+              />
+              <input
+                type="file"
+                id="file-upload"
+                multiple
+                onChange={handleFileUpload}
+                className="upload-input"
+              />
+              <input
+                type="url"
+                id="file-upload"
+                multiple
+                onChange={handleFileUpload}
+                className="upload-input"
+                placeholder="Enter business location"
+              />
             </div>
-            <h2>Required Documents:</h2>
-            <ul className="doc-list">
-              <li>Business Registration (If available)</li>
-              <li>Recent Bank Statements (If available)</li>
-              <li>Proof of Business Location</li>
-              <li>Any Govt. ID Proof</li>
-            </ul>
+            
           </div>
         );
       case 4:
+        return (
+          <div>
+            <h3>Social References</h3>
+            <p>Provide references of credible individuals like landlords & suppliers for verification</p>
+            <div className="form-group">
+              <p>Person 1:</p>
+            <input
+                type="text"
+                placeholder="Name"
+                className="input full-width"
+                defaultValue=""
+              />
+            <input
+              type="email"
+              placeholder="Email"
+              className="input full-width"
+              defaultValue=""
+            />
+            <input
+              type="tel"
+              placeholder="Phone Number"
+              className="input full-width"
+            />
+            </div>
+            <div className="form-group">
+              <p>Person 2:</p>
+            <input
+                type="text"
+                placeholder="Name"
+                className="input full-width"
+                defaultValue=""
+              />
+            <input
+              type="email"
+              placeholder="Email"
+              className="input full-width"
+              defaultValue=""
+            />
+            <input
+              type="tel"
+              placeholder="Phone Number"
+              className="input full-width"
+            />
+            </div>
+          </div>
+        );
+      case 5:
         return (
           <div>
             <h3>Loan Application</h3>
@@ -150,14 +208,14 @@ export const Dashboard = () => {
             ></textarea>
           </div>
         );
-      case 5:
+      case 6:
         return (
           <div>
             <h3>Review & Submit</h3>
             <p>Review your application before submitting.</p>
-            <button className="btn" onClick={handleSubmit}>
+            {/* <button className="btn" onClick={handleSubmit}>
               Submit Application
-            </button>
+            </button> */}
           </div>
         );
       default:
@@ -171,9 +229,6 @@ export const Dashboard = () => {
       <nav className="dashboard-navbar">
         <div className="dashboard-logo">
           Nano<i className="ri-money-rupee-circle-fill"></i>Rise
-        </div>
-        <div className="dashboard-user-icon">
-          {isSignedIn && <UserButton afterSignOutUrl="/login" />}
         </div>
       </nav>
 
@@ -212,19 +267,20 @@ export const Dashboard = () => {
           >
             Previous
           </button>
-          <button
+          <button className="btn"
             onClick={() =>
               currentStep === steps.length
                 ? handleSubmit()
                 : setCurrentStep((prev) => Math.min(prev + 1, steps.length))
+                
             }
           >
-            {currentStep === steps.length ? "Submit" : "Next"}
+            {currentStep === steps.length ? "Submit Application" : "Next"}
           </button>
         </div>
       </section>
 
-      <Footer/>
+      <Footer />
     </div>
   );
 };
