@@ -8,7 +8,7 @@ import { ClerkProvider } from '@clerk/clerk-react';
 const CLERK_KEY = 'pk_test_cGF0aWVudC1raW5nZmlzaC00Mi5jbGVyay5hY2NvdW50cy5kZXYk';
 
 // Use environment variable if available, otherwise use the hardcoded key
-const clerk_key = import.meta.env.VITE_CLERK_KEY || CLERK_KEY;
+// const clerk_key = import.meta.env.VITE_CLERK_KEY || CLERK_KEY;
 
 // Remove the error check since we now have a fallback
 // if(!clerk_key){
@@ -17,7 +17,7 @@ const clerk_key = import.meta.env.VITE_CLERK_KEY || CLERK_KEY;
 
 createRoot(document.getElementById('root')).render(
  <StrictMode>
-   <ClerkProvider publishableKey={clerk_key}>
+   <ClerkProvider publishableKey={CLERK_KEY}>
      <App />
    </ClerkProvider>
  </StrictMode>,
