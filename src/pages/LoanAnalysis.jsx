@@ -24,7 +24,7 @@ const LoanAnalysis = () => {
         </div>
       </section>
 
-      {/* Embed Streamlit App */}
+      {/* Embed Streamlit App
       <iframe
         className="streamlit-embed"
         src="https://creditworthy-customer-view.streamlit.app/?embed=true"
@@ -35,7 +35,7 @@ const LoanAnalysis = () => {
         height="800px"
         style={{ border: "none", marginTop: "20px" }}
         sandbox="allow-scripts allow-same-origin allow-forms"
-      ></iframe>
+      ></iframe> */}
 
       <Footer />
     </section>
