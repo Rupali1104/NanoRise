@@ -206,6 +206,16 @@ export const Dashboard = () => {
               placeholder="Loan Purpose"
               className="input full-width"
             ></textarea>
+            <input
+              type="number"
+              placeholder="Current Loan Amount (if any)"
+              className="input full-width"
+            />
+            <input
+              type="number"
+              placeholder="Annual Income"
+              className="input full-width"
+            />
           </div>
         );
       case 6:

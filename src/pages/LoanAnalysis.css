@@ -25,6 +25,17 @@
   .adashboard-navbar div{
     font-size: 1.8rem;
   }
+.charts{
+    display: flex;
+    text-align: center;
+    align-items: center;
+}
+  .btn{
+    margin: 30px;
+  }
+
+
+  
 @media (max-width: 768px) {
     .main-analysis {
         width: 98vw;

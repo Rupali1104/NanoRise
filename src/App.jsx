@@ -9,6 +9,7 @@ import Register from "./pages/Register";
 import { Dashboard } from "./pages/Dashboard";
 import LoanAnalysis from './pages/LoanAnalysis';
 import { Footer } from "./components/layout/Footer";
+import FinanceInsights from "./pages/FinanceInsights";
 
 function App() {
   return (
@@ -42,6 +43,10 @@ function App() {
 
 <Route path="/LoanAnalysis" element={<div id="root">
               <LoanAnalysis />
+            </div>} />
+            
+<Route path="/FinanceInsights" element={<div id="root">
+              <FinanceInsights />
             </div>} />
 
         {/* Routes with Navbar and Footer */}

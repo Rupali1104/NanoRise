@@ -1,7 +1,16 @@
 import "./LoanAnalysis.css";
 import { Footer } from "../components/layout/Footer";
+import PieChart from "../components/layout/PieChart";
+import { useNavigate } from "react-router-dom";
+import DoughnutChart from "../components/layout/DoughnutChart";
+
 
 const LoanAnalysis = () => {
+  const navigate = useNavigate();
+
+const handleSubmit = () => {
+  navigate("/FinanceInsights");
+};
   return (
     <section className="analysis-section">
       {/* Navbar */}
@@ -15,13 +24,27 @@ const LoanAnalysis = () => {
       <section className="main-analysis d-text">
         <div className="analysis-heading">
           <h1>
-            Welcome to our <span>NanoRise Dashboard</span>
+            Welcome to our <span>Analysis Dashboard</span>
           </h1>
           <p>
-            Your loan application has been submitted successfully. View your
-            personalized loan insights and recommendations instantly!
+            Your loan application has been submitted successfully.
+          </p>
+          <p>            Get your Comprehensive analysis report now!
           </p>
         </div>
+
+        <div className="charts">
+        {/* // <PieChart/> */}
+        {/* // <PieChart/> */}
+        <DoughnutChart/></div>
+        
+
+        <button
+            className="btn"
+            onClick={()=>handleSubmit()}
+          >
+            Next
+          </button>
       </section>
 
       {/* Embed Streamlit App
@@ -37,7 +60,8 @@ const LoanAnalysis = () => {
         sandbox="allow-scripts allow-same-origin allow-forms"
       ></iframe> */}
 
-      <Footer />
+<Footer/>  
+      
     </section>
   );
 };
