@@ -29,14 +29,36 @@ const handleSubmit = () => {
           <p>
             Your loan application has been submitted successfully.
           </p>
-          <p>            Get your Comprehensive analysis report now!
+          <p> Get your Comprehensive analysis report now!
           </p>
         </div>
-
-        <div className="charts">
-        {/* // <PieChart/> */}
-        {/* // <PieChart/> */}
-        <DoughnutChart/></div>
+        <div className="results">
+        <div className="status-container">
+          <div className="status-item">
+            <span className="status-text">Data from UPI transactions accessed</span>
+            <span className="status-tick">✔</span>
+          </div>
+          <div className="status-item">
+            <span className="status-text">Location Images provided are matched</span>
+            <span className="status-tick">✔</span>
+          </div>
+          <div className="status-item">
+            <span className="status-text">Feedback form sent to referenced people</span>
+            <span className="status-tick">✔</span>
+          </div>
+          <div className="status-item">
+            <span className="status-text">Documents provided are verified</span>
+            <span className="status-tick">✔</span>
+          </div>
+          <div className="status-item">
+            <span className="status-text">Credit History has been verified</span>
+            <span className="status-tick">✔</span>
+          </div>
+        </div>
+      <DoughnutChart/>
+    </div>
+        
+        
         
 
         <button

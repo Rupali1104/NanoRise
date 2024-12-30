@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React from 'react';
 import { Doughnut } from 'react-chartjs-2';
 import {
   Chart as ChartJS,
@@ -9,14 +9,13 @@ import {
 ChartJS.register(ArcElement, Tooltip);
 
 // Function to generate a random percentage between 70 and 100
-const getRandomPercentage = () => Math.floor(Math.random() * (100 - 70 + 1)) + 70;
+const getRandomPercentage = () => Math.floor(Math.random() * (90 - 75 + 1)) + 75;
 
-const PercentageDoughnutChart = () => {
-  const [rotationClass, setRotationClass] = useState(''); // State for rotation animation
+const DoughnutChart = () => {
   const randomPercentage = getRandomPercentage(); // Generate random percentage
 
   const data = {
-    labels: [`${randomPercentage}%`], // Display the percentage as a label
+    labels: ['CreditWorthiness',],
     datasets: [
       {
         data: [randomPercentage, 100 - randomPercentage], // Show percentage and remaining part
@@ -38,22 +37,15 @@ const PercentageDoughnutChart = () => {
     cutout: '80%', // Thin doughnut
   };
 
-  useEffect(() => {
-    // Trigger the rotation animation on load
-    setRotationClass('rotate-once');
-    const timer = setTimeout(() => {
-      setRotationClass('');
-    }, 2000); // Matches animation duration
-
-    return () => clearTimeout(timer);
-  }, []);
-
   return (
-    <div className={`chart-container ${rotationClass}`}>
-      <Doughnut data={data} options={options} />
-      <div className="percentage-label">{randomPercentage}%</div>
+    <div className="chart-container">
+      <div className="rotating-chart">
+        <Doughnut data={data} options={options} />
+      </div>
+      <div className="percentage-label">{randomPercentage}/100</div>
+      Congratulations! You are Eligible..!
     </div>
   );
 };
 
-export default PercentageDoughnutChart;
+export default DoughnutChart;

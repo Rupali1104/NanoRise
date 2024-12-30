@@ -25,16 +25,38 @@
   .adashboard-navbar div{
     font-size: 1.8rem;
   }
-.charts{
-    display: flex;
-    text-align: center;
-    align-items: center;
-}
+
   .btn{
     margin: 30px;
   }
 
-
+  .status-container {
+    font-family: Arial, sans-serif;
+    margin: 20px;
+  }
+  
+  .status-item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+  }
+  
+  .status-text {
+    font-size: 16px;
+    color: #333;
+    margin-right: 10px;
+  }
+  
+  .status-tick {
+    font-size: 18px;
+    color: green;
+  }
+  
+.results{
+    margin-top: 10px;
+    display: flex;
+    justify-content: space-around;
+}
   
 @media (max-width: 768px) {
     .main-analysis {

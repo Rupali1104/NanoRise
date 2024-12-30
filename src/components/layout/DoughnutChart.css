@@ -1,18 +1,27 @@
+/* Container for the chart */
 .chart-container {
-    position: relative;
-    width: 300px; /* Fixed width */
-    height: 300px; /* Fixed height */
+    position: fixed;
+    width: 700px; /* Fixed width */
+    height: 700px; /* Fixed height */
+    min-height: 50vh;
     margin: 0 auto;
     background: radial-gradient(circle, rgba(240, 255, 240, 1) 0%, rgba(220, 255, 220, 1) 100%);
-    box-shadow: 0 4px 20px rgba(0, 128, 0, 0.2);
+    box-shadow: 0 4px 20px rgba(7, 192, 7, 0.823);
     border-radius: 50%;
     display: flex;
     align-items: center;
     justify-content: center;
     overflow: hidden; /* Prevents any content overflow */
+    font-size: large;
+    font-weight: bold;
   }
   
-  /* Keyframe animation for a single rotation */
+  /* Rotating animation for the chart */
+  .rotating-chart {
+    animation: rotate-once 2s ease-in-out forwards;
+  }
+  
+  /* Keyframe animation for rotating once */
   @keyframes rotate-once {
     0% {
       transform: rotate(0deg);
@@ -22,15 +31,10 @@
     }
   }
   
-  /* Apply animation only when class is active */
-  .chart-container.rotate-once {
-    animation: rotate-once 2s ease-in-out forwards;
-  }
-  
-  /* Percentage label in the center of the chart */
+  /* Percentage label displayed in the center of the chart */
   .percentage-label {
     position: absolute;
-    font-size: 1.5rem;
+    font-size: 2rem;
     color: rgba(34, 139, 34, 1);
     font-weight: bold;
     font-family: Arial, sans-serif;
