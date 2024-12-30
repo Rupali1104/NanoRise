@@ -12,7 +12,7 @@ NanoRise focuses on empowering nano-entrepreneurs such as vegetable vendors, sma
 
 ## Project Presentation
 
-[NanoRise Presentation](your-ppt-link)
+[NanoRise Presentation](https://www.canva.com/design/DAGXErtOwNo/6VFu6QZjQojSZ-PosC2ZRg/edit?ui=eyJEIjp7IlAiOnsiQiI6ZmFsc2V9fX0)
 
 ---
 
