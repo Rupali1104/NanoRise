@@ -6,7 +6,7 @@ NanoRise focuses on empowering nano-entrepreneurs such as vegetable vendors, sma
 
 ## Video Demo 🎥
 
-[![Watch the Video Demo](https://via.placeholder.com/150)](your-video-demo-link)
+[![Watch the Video Demo](https://via.placeholder.com/150)](https://drive.google.com/file/d/1NBMyW1ITQW7BMITIGYDUODGmF4R8WpFb/view?usp=drive_link)
 
 ---
 
